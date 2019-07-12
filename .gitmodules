@@ -1,0 +1,3 @@
+[submodule "terra-chef"]
+	path = terra-chef
+	url = https://github.com/Nevynxxx/terra-chef.git
