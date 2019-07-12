@@ -67,4 +67,10 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision :chef_solo do |chef|
+    chef.custom_config_path = "terra-chef/CustomConfiguration.chef"
+    chef.cookbooks_path = "terra-chef/cookbooks"
+	chef.roles_path = "terra-chef/roles"
+	chef.add_role "mail_filter"
+  end
 end
